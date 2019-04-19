@@ -6,15 +6,18 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd .env.development gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "env-cmd": "^8.0.2",
     "gatsby": "^2.3.16",
     "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-source-filesystem": "2.0.28",
+    "gatsby-transformer-remark": "2.3.8",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

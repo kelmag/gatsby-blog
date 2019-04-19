@@ -1,7 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "Kelmags blog",
+    title: "Kelmag's",
     author: "Kelmag",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
 }
