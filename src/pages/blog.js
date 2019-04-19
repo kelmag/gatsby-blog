@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import blogStyles from "./blog.module.scss"
-
+import Head from "../components/head"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -20,6 +20,7 @@ const BlogPage = () => {
   `)
   return (
     <Layout>
+      <Head title="Blog" />
       <h1>Blog</h1>
       <div>This is where posts gonna be</div>
       <ol className={blogStyles.posts}>
